@@ -1,0 +1,14 @@
+{
+  "name": "machine-account",
+  "main": "index.html",
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "height": 400,
+    "width": 800
+  },
+  "dependencies": {
+    "async": "^1.2.0",
+    "mysql": "felixge/node-mysql"
+  }
+}
