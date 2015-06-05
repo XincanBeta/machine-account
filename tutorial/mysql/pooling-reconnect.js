@@ -3,6 +3,7 @@
 
  增加：
  连接池的超时测试
+ http://blog.fens.me/nodejs-mysql-intro/
  */
 
 
@@ -29,5 +30,5 @@ pool.getConnection(function (err, conn) {
   }
 
   query();
-  setInterval(query, 5000);
+  setInterval(query, 15000);
 });
