@@ -9,7 +9,7 @@
  */
 var mysql = require('mysql');
 var conn;
-function handleError () {
+function handleError() {
   conn = mysql.createConnection({
     host: 'localhost',
     user: 'ma',
@@ -22,7 +22,7 @@ function handleError () {
   conn.connect(function (err) {
     if (err) {
       console.log('error when connecting to db:', err);
-      setTimeout(handleError , 2000);
+      setTimeout(handleError, 2000);
     }
   });
 
@@ -35,5 +35,18 @@ function handleError () {
       throw err;
     }
   });
+
+  // 模拟连接超时，PROTOCOL_CONNECTION_LOST
+  /*function query() {
+    console.log(new Date());
+    var sql = "show variables like 'wait_timeout'";
+    conn.query(sql, function (err, res) {
+      console.log(res);
+    });
+  }
+
+  query();
+  setInterval(query, 15 * 1000);
+*/
 }
 handleError();

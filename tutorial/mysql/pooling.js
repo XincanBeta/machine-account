@@ -1,4 +1,7 @@
-// 连接池配置
+/*
+ 连接池配置
+ */
+
 
 var mysql = require('mysql');
 var pool = mysql.createPool({
