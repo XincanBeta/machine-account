@@ -3,6 +3,8 @@
   "version": "0.0.1-alpha",
   "main": "index.html",
   "window": {
+    "title": "弘云-电子台账系统",
+    "icon": "assets/img/media/logo.png",
     "toolbar": true,
     "frame": true,
     "resizable": false,
